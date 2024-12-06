@@ -27,4 +27,4 @@
   </table> 
   {{$items->links()}}
 
-@endsectio
+@endsection

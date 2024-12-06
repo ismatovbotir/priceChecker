@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\PriceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +14,10 @@ use App\Http\Controllers\ItemController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('main');
-
+Route::get('/', [PriceController::class,'index'])->name('main');
+Route::post('/', [PriceController::class,'show'])->name('show');
 Auth::routes();
 
-Route::resource('/items',ItemCOntroller::class)->names('items');
+Route::resource('/items',ItemController::class)->names('items');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
