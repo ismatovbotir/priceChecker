@@ -4,7 +4,9 @@
 @section('sidebar')
 @endsection
 @section('contentBody')
-
+<div class="justify-center">
+    <img src="images/logo.jpeg" alt="">
+</div>
 
 <form action="{{route('show')}}" method="POST">
     @csrf
