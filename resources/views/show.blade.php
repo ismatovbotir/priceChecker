@@ -20,7 +20,7 @@
 
             <h2 class="card-title display-1">{{number_format($item->price,0,',',' ')}}</h2>
         </div>
-        <p class="fs-1">{{$item->name}}</p>
+        <h3 class="display-3>{{$item->name}}</h3>
     </div>
 </div>
 
