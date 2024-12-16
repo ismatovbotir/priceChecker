@@ -5,7 +5,7 @@
 @endsection
 @section('contentBody')
 <div class="justify-center">
-    <img src="images/logo.jpeg" alt="">
+    <img src="images/logo.jpeg" class="img-thumbnail"  alt="">
 </div>
 
 <form action="{{route('show')}}" method="POST">

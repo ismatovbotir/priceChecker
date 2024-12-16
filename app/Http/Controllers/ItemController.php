@@ -8,6 +8,7 @@ use App\Imports\ItemImport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 use App\Models\Item;
+use App\Http\Requests\Item\LoadRequest;
 
 class ItemController extends Controller
 {
@@ -33,9 +34,9 @@ class ItemController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(LoadRequest $request)
     {
-        
+        $validated=$request->validated();
         Excel::import(new ItemImport, $request->file('file'));
         
         return to_route('items.index');
