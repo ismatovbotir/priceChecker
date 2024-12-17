@@ -15,6 +15,7 @@ use App\Http\Controllers\PriceController;
 */
 
 Route::get('/', [PriceController::class,'index'])->name('main');
+Route::get('/{barcode}', [PriceController::class,'barcode'])->name('barcode');
 Route::post('/', [PriceController::class,'show'])->name('show');
 Auth::routes();
 

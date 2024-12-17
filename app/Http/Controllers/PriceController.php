@@ -23,4 +23,15 @@ class PriceController extends Controller
             return view('show',['item'=>$item]);
         }
     }
+    public function barcode($id){
+        $item=Item::where('barcode',$id)->first();
+        //dd($item);
+        if ($item==null){
+            return to_route('main');
+        }else{
+
+            return view('show',['item'=>$item]);
+        }
+
+    }
 }
