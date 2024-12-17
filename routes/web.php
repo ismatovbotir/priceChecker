@@ -15,10 +15,13 @@ use App\Http\Controllers\PriceController;
 */
 
 Route::get('/', [PriceController::class,'index'])->name('main');
+
+Route::resource('/items',ItemController::class)->names('items');
+
 Route::get('/{barcode}', [PriceController::class,'barcode'])->name('barcode');
 Route::post('/', [PriceController::class,'show'])->name('show');
 Auth::routes();
 
-Route::resource('/items',ItemController::class)->names('items');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
