@@ -4,7 +4,7 @@
 @section('sidebar')
 @endsection
 @section('contentBody')
-<div class="justify-center">
+<div class="justify-center md">
     <img src="images/main.png" class="img-thumbnail"  alt="">
 </div>
 {{--
