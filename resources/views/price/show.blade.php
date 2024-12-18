@@ -2,10 +2,10 @@
 @section('content')
 <div class="container justify-center md align-middle" style="height:100vh">
     <div class="justify-center">
-        <img src="images/logo.jpeg" alt="">
+        <img src="images/logo.jpeg" alt="" style="width:50%;height:auto">
     </div>
    
-    <div class="card text-white bg-primary mt-5">
+    <div class="card text-white bg-primary mt-1">
         <div class="card-header">{{$item->barcode}}</div>
         <div class="card-inner">
             <div class="m-5 d-flex justify-center">
