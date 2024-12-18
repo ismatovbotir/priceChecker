@@ -1,7 +1,7 @@
 @extends('layouts.price')
 @section('content')
 <div class="container justify-center md align-middle" style="height:100vh">
-    <div class="container justify-center">
+    <div class="container d-flex justify-center">
         <img src="images/logo.jpeg" alt="" style="width:30%">
     </div>
    
