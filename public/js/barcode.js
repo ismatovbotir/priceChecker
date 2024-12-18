@@ -6,7 +6,7 @@ document.addEventListener('keypress',function(event){
         if (barcode.length>0){
 
             //console.log(barcode)
-            this.location.href('/'+barcode);
+            location.href('/'+barcode);
         }
     }else{
         barcode+=event.key
