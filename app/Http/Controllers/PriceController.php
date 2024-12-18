@@ -8,7 +8,7 @@ use App\Models\Item;
 class PriceController extends Controller
 {
     public function index(){
-        return view('index');
+        return view('price.index');
 
     }
     public function show(Request $request){
@@ -20,7 +20,7 @@ class PriceController extends Controller
             return to_route('main');
         }else{
 
-            return view('show',['item'=>$item]);
+            return view('price.show',['item'=>$item]);
         }
     }
     public function barcode($id){
@@ -30,7 +30,7 @@ class PriceController extends Controller
             return to_route('main');
         }else{
 
-            return view('show',['item'=>$item]);
+            return view('price.show',['item'=>$item]);
         }
 
     }

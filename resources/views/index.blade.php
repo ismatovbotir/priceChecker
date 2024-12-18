@@ -1,9 +1,5 @@
-@extends('layouts.app')
-@section('contentHeader')
-@endsection
-@section('sidebar')
-@endsection
-@section('contentBody')
+
+@section('content')
 <div class="container justify-center md">
     <img src="images/main.png" class="img-thumbnail"  alt="" style="width:80%;height:80%">
 </div>
