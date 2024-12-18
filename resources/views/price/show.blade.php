@@ -23,4 +23,5 @@
 @section('scripts')
 @parent
 <script src="{{asset('js/timer.js')}}"></script>
+<script src="{{asset('js/barcode.js')}}"></script>
 @endsection
