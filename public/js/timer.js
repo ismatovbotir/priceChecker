@@ -1,4 +1,4 @@
 var start = Date.now();
 setInterval(function() {
-    this.location.href("/")
+    this.location.assign("/")
 }, 5000);
