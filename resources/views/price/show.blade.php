@@ -2,7 +2,7 @@
 @section('content')
 <div class="container justify-center md align-middle" style="height:100vh">
     <div class="container justify-center">
-        <img src="images/logo.jpeg" alt="" style="width:10%">
+        <img src="images/logo.jpeg" alt="" style="width:30%">
     </div>
    
     <div class="card text-white bg-primary mt-1">
