@@ -16,11 +16,12 @@ use App\Http\Controllers\PriceController;
 
 Route::get('/', [PriceController::class,'index'])->name('main');
 
-Route::group(['middleware'=>['auth'],'prefix'=>'admin'],function(){
+Route::group(['middleware'=>['auth'],'prefix'=>'admin','as'=>'admin.'],function(){
 
 
     Route::resource('/items',ItemController::class)->middleware('auth')->names('items');
-})->names('admin');
+
+});
 
 Route::get('/{barcode}', [PriceController::class,'barcode'])->name('barcode');
 Route::post('/', [PriceController::class,'show'])->name('show');
