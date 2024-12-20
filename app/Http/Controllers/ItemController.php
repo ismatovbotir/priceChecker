@@ -12,9 +12,10 @@ use App\Http\Requests\Item\LoadRequest;
 
 class ItemController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $items=Item::paginate(20);
