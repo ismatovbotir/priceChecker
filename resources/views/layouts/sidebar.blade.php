@@ -21,28 +21,33 @@
                                         <span class="nk-menu-text">Monitoring</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
-                                
-                                <li class="nk-menu-item">
+                                {{-- 
+                                    <li class="nk-menu-item">
                                     <a href="" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-bitcoin-cash"></em></span>
                                         <span class="nk-menu-text">Price</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
-                              
+                                --}}
+                               
                                 <li class="nk-menu-item">
-                                    <a href="" class="nk-menu-link">
+                                    <a href="{{route('admin.items.index')}}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-list"></em></span>
-                                        <span class="nk-menu-text">Order</span>
+                                        <span class="nk-menu-text">Товары</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
                                
                                 <li class="nk-menu-item">
-                                    <a href="" class="nk-menu-link">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-list"></em></span>
-                                        <span class="nk-menu-text">Collect</span>
+                                    <a href="{{route('admin.items.create')}}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-upload"></em></span>
+                                        <span class="nk-menu-text">Загрузка</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
                             
+                               {{--
+                                
+                                
+                                
                                
                                 <li class="nk-menu-item">
                                     <a href="" class="nk-menu-link">
@@ -60,14 +65,14 @@
                                         <span class="nk-menu-icon"><em class="icon ni ni-tile-thumb"></em></span>
                                         <span class="nk-menu-text">Shops</span>
                                     </a>
-                                    {{--<ul class="nk-menu-sub">
+                                    <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
                                             <a href="html/project-card.html" class="nk-menu-link"><span class="nk-menu-text">Project Cards</span></a>
                                         </li>
                                         <li class="nk-menu-item">
                                             <a href="html/project-list.html" class="nk-menu-link"><span class="nk-menu-text">Project List</span></a>
                                         </li>
-                                    </ul><!-- .nk-menu-sub -->--}}
+                                    </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
@@ -89,18 +94,18 @@
                                       
                                         <span class="nk-menu-text">1C</span>
                                     </a>
-                                    {{--<ul class="nk-menu-sub">
+                                   <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
                                             <a href="html/transaction-basic.html" class="nk-menu-link"><span class="nk-menu-text">Tranx List - Basic</span></a>
                                         </li>
                                         <li class="nk-menu-item">
                                             <a href="html/transaction-crypto.html" class="nk-menu-link"><span class="nk-menu-text">Tranx List - Crypto</span></a>
                                         </li>
-                                    </ul><!-- .nk-menu-sub -->--}}
+                                    </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->
                                 <li class="nk-menu-item has-sub">
                              
-                               {{-- <li class="nk-menu-item has-sub">
+                              <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-file-docs"></em></span>
                                         <span class="nk-menu-text">AML / KYCs</span>
