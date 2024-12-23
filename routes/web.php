@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PriceController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,22 +17,24 @@ use App\Http\Controllers\PriceController;
 
 Route::get('/', [PriceController::class,'index'])->name('main');
 
-Route::group(['middleware'=>['auth'],'prefix'=>'admin','as'=>'admin.'],function(){
+Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
 
+    Route::get('/',function(){
+        return 'admn';
+    })->name('index');
 
-    Route::resource('/items',ItemController::class)->middleware('auth')->names('items');
+    Route::resource('/items',ItemController::class)->names('items');
 
 });
 
 Route::get('/{barcode}', [PriceController::class,'barcode'])->name('barcode');
+
 Route::post('/', [PriceController::class,'show'])->name('show');
+
 Auth::routes();
 
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-Route::fallback(function(){
-    return to_route('main');
-});
+// Route::fallback(function(){
+//     return to_route('main');
+// });
