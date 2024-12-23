@@ -54,7 +54,7 @@
                                         </div>
                                         <div class="nk-news-text">
                                             @auth
-                                            <p>{{Auth::user()->shop->shop_name}}<span> {{Auth::user()->shop->price_name}}</span></p>
+                                            <p>{{Auth::user()->name}}<span> {{Auth::user()->email}}</span></p>
                                             @endauth
                                             <em class="icon ni ni-external"></em>
                                         </div>
@@ -72,7 +72,7 @@
                                                 <div class="user-info d-none d-md-block">
                                                     <div class="user-status">
                                                     @auth
-                                                            {{Auth::user()->role->name}}
+                                                            {{Auth::user()->name}}
                                                         @endauth
                                                     
                                                     </div>

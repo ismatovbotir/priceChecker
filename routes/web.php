@@ -15,9 +15,11 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+Auth::routes();
+
 Route::get('/', [PriceController::class,'index'])->name('main');
 
-Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
+Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth'],function(){
 
     Route::get('/',[ItemController::class,'index'])->name('index');
 
@@ -28,8 +30,6 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
 Route::get('/{barcode}', [PriceController::class,'barcode'])->name('barcode');
 
 Route::post('/', [PriceController::class,'show'])->name('show');
-
-Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
