@@ -19,9 +19,7 @@ Route::get('/', [PriceController::class,'index'])->name('main');
 
 Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
 
-    Route::get('/',function(){
-        route_to('admin.items.index');
-    })->name('index');
+    Route::get('/',[ItemController::class,'index'])->name('index');
 
     Route::resource('/items',ItemController::class)->names('items');
 
