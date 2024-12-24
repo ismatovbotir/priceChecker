@@ -21,7 +21,7 @@ Route::get('/', [PriceController::class,'index'])->name('main');
 
 Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth'],function(){
 
-    Route::get('/',[ItemController::class,'index'])->name('index');
+    Route::get('/',[ItemController::class,'admin'])->name('index');
 
     Route::resource('/items',ItemController::class)->names('items');
 
@@ -33,6 +33,6 @@ Route::post('/', [PriceController::class,'show'])->name('show');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-// Route::fallback(function(){
-//     return to_route('main');
-// });
+Route::fallback(function(){
+    return to_route('main');
+});

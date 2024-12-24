@@ -16,7 +16,7 @@
                         <div class="nk-sidebar-menu" data-simplebar>
                             <ul class="nk-menu">
                                 <li class="nk-menu-item">
-                                    <a href="{{route('main')}}" class="nk-menu-link">
+                                    <a href="{{route('admin.index')}}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-dashlite"></em></span>
                                         <span class="nk-menu-text">Monitoring</span>
                                     </a>
