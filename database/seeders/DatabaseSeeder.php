@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\PriceChecker;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -21,11 +23,18 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        User::create(
+        // User::create(
+        //     [
+        //         'name'=>'Admin',
+        //         'email'=>'admin@admin.uz',
+        //         'password'=>Hash::make('@987654321')
+        //     ]
+        // );
+        PriceChecker::create(
             [
-                'name'=>'Admin',
-                'email'=>'admin@admin.uz',
-                'password'=>Hash::make('@987654321')
+                
+                'name'=>'Ц-1'
+               
             ]
         );
     }

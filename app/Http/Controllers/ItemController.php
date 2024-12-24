@@ -9,6 +9,8 @@ use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 use App\Models\Item;
 use App\Http\Requests\Item\LoadRequest;
+use App\Models\PriceChecker;
+use App\Models\Search;
 
 class ItemController extends Controller
 {
@@ -76,6 +78,14 @@ class ItemController extends Controller
     }
 
     public function admin(){
-        return view('admin.index');
+        $itemCount=(Item::count());
+        $shops=PriceChecker::all();
+        $stats=Search::orderBy('created_at','desc')->paginate(10);
+        //dd($stats);
+        return view('admin.index',[
+                                    'itemCount'=>$itemCount,
+                                    'shops'=>$shops,
+                                    'stats'=>$stats
+                                ]);
     }
 }

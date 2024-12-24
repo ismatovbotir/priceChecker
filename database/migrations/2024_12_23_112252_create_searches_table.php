@@ -16,7 +16,7 @@ return new class extends Migration
             $table->boolean('found')->default(true);
             $table->foreignId('item_id')->nullable();
             $table->string('barcode')->nullable();
-            $table->foreignId('price_checker_id')->nullable();
+            $table->foreignUuid('price_checker_id')->nullable();
             $table->string('name')->default('Ц-1');
             $table->timestamps();
         });

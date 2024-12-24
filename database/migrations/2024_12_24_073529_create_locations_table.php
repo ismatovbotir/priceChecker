@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('price_checkers', function (Blueprint $table) {
+        Schema::create('locations', function (Blueprint $table) {
             $table->uuid('id');
             $table->string('name');
+            $table->foreignUuid('shop_id')->nullable();
             $table->timestamps();
         });
     }
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('price_checkers');
+        Schema::dropIfExists('locations');
     }
 };
