@@ -40,7 +40,7 @@ class ItemController extends Controller
         $validated=$request->validated();
         Excel::import(new ItemImport, $request->file('file'));
         
-        return to_route('items.index');
+        return to_route('admin.items.index');
     }
 
     /**
@@ -48,7 +48,7 @@ class ItemController extends Controller
      */
     public function show(string $id="")
     {
-        return view('index');
+        return view('items.index');
     }
 
     /**
