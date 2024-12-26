@@ -88,4 +88,13 @@ class ItemController extends Controller
                                     'stats'=>$stats
                                 ]);
     }
+
+    public function stat(){
+        $stats=Search::orderBy('created_at','desc')->paginate(20);
+       // dd($stats);
+        return view('stat.index',[
+            
+            'stats'=>$stats
+        ]);
+    }
 }

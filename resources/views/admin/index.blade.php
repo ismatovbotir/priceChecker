@@ -54,7 +54,7 @@
               <div class="card-inner">
                 <div class="card-title-group">
                   <div class="card-title">
-                    <h6 class="title"><span class="mr-2">Статистика по поиску</span> <a href="#" class="link d-none d-sm-inline">Все</a></h6>
+                    <h6 class="title"><span class="mr-2">Статистика по поиску</span> <a href="{{route('admin.stat')}}" class="link d-none d-sm-inline">Все</a></h6>
                   </div>
                   
                 </div>
@@ -112,7 +112,7 @@
                 </div>
               </div>
               <div class="card-inner-sm border-top text-center d-sm-none">
-                <a href="#" class="btn btn-link btn-block">See History</a>
+                <a href="{{route('admin.stat')}}" class="btn btn-link btn-block">See All</a>
               </div>
             </div><!-- .card -->
           </div><!-- .col -->
