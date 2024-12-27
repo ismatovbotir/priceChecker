@@ -11,6 +11,7 @@ use App\Models\Item;
 use App\Http\Requests\Item\LoadRequest;
 use App\Models\PriceChecker;
 use App\Models\Search;
+use App\Exports\StatExport;
 
 class ItemController extends Controller
 {
@@ -96,5 +97,8 @@ class ItemController extends Controller
             
             'stats'=>$stats
         ]);
+    }
+    public function export(){
+        return Excel::download(new StatExport ,'stat.xlsx');
     }
 }

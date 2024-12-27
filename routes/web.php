@@ -26,6 +26,9 @@ Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth'],function(){
     Route::resource('/items',ItemController::class)->names('items');
 
     Route::get('/stat',[ItemController::class,'stat'])->name('stat');
+    
+    Route::get('/stat/export',[ItemController::class,'export'])->name('export');
+    
 
 });
 
