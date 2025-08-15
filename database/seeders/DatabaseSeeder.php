@@ -23,13 +23,13 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        // User::create(
-        //     [
-        //         'name'=>'Admin',
-        //         'email'=>'admin@admin.uz',
-        //         'password'=>Hash::make('@987654321')
-        //     ]
-        // );
+         User::create(
+             [
+                 'name'=>'Timur',
+                 'email'=>'info@vitaminopro.uz',
+                 'password'=>Hash::make('Vitamino2025')
+             ]
+         );
         PriceChecker::create(
             [
                 
